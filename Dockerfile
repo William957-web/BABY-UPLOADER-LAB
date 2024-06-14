@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y \
     php5-mcrypt \
     php5-xmlrpc \
     php5-xsl \
-    php5-mbstring \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
