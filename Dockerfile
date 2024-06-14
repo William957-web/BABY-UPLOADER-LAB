@@ -20,10 +20,12 @@ WORKDIR /var/www/html
 
 COPY . /var/www/html
 RUN rm /var/www/html/Dockerfile
-RUN chmod 777 /var/www/html/
+RUN chmod 777 -R /var/www/
 RUN mkdir /var/www/html/uploads
 RUN chmod 777 /var/www/html/uploads
 RUN echo 'ICED{My_First_RC3_with_file_uploading}' > /flag-$(xxd -l 6 -p /dev/urandom)
+RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
+USER icedtea
 EXPOSE 80
 
 # 啟動 PHP 內建的 Web 伺服器
