@@ -23,8 +23,10 @@ RUN rm /var/www/html/Dockerfile
 RUN chmod 777 -R /var/www/
 RUN mkdir /var/www/html/uploads
 RUN chmod 777 /var/www/html/uploads
-RUN echo 'ICED{My_First_RC3_with_file_uploading}' > /flag-$(xxd -l 6 -p /dev/urandom)
 RUN useradd -m -d /home/icedtea -s /bin/bash icedtea
+RUN echo 'ICED{My_First_RC3_with_file_uploading}' > /home/icedtea/user.txt
+RUN echo 'ICED{Priv_Sec_fiNding!!!}' > /root/root.txt
+RUN chmod u+s /usr/bin/find && chmod g+s /usr/bin/find && chmod o+s /usr/bin/find
 USER icedtea
 EXPOSE 80
 
