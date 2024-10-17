@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
-RUN apt-get update -y && apt-get install -y software-properties-common php php-cli 
-    && apt-get clean 
+RUN apt-get update -y && apt-get install -y software-properties-common php php-cli \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www/html
