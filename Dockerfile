@@ -1,18 +1,18 @@
-FROM ubuntu:14.04
+FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y \
     software-properties-common \
     && add-apt-repository ppa:ondrej/php \
     && apt-get update && apt-get install -y \
-    php5 \
-    php5-mysql \
-    php5-curl \
-    php5-json \
-    php5-cli \
-    php5-gd \
-    php5-mcrypt \
-    php5-xmlrpc \
-    php5-xsl \
+    php \
+    php-mysql \
+    php-curl \
+    php-json \
+    php-cli \
+    php-gd \
+    php-mcrypt \
+    php-xmlrpc \
+    php-xsl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
