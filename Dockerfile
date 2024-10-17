@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-RUN apt-get update -y && apt-get install -y software-properties-common php php-cli --no-install-recommends \
+RUN apt-get update -y && apt-get install -y php php-cli --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
