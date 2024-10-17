@@ -1,9 +1,7 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update -y && apt-get install \
     software-properties-common \
-    && add-apt-repository ppa:ondrej/php \
-    && apt-get update && apt-get install -y \
     php \
     php-cli 
     && apt-get clean \
