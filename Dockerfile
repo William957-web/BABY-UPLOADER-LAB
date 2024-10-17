@@ -1,12 +1,8 @@
-FROM ubuntu:22.04
-
-RUN apt-get update -y && apt-get install -y php php-cli --no-install-recommends \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
+FROM php:8.2-cli
+COPY . /var/www/html
 WORKDIR /var/www/html
 
-COPY . /var/www/html
+
 RUN rm /var/www/html/Dockerfile
 RUN chmod 777 -R /var/www/
 RUN mkdir /var/www/html/uploads
