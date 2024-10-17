@@ -5,14 +5,7 @@ RUN apt-get update && apt-get install -y \
     && add-apt-repository ppa:ondrej/php \
     && apt-get update && apt-get install -y \
     php \
-    php-mysql \
-    php-curl \
-    php-json \
-    php-cli \
-    php-gd \
-    php-mcrypt \
-    php-xmlrpc \
-    php-xsl \
+    php-cli 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
